@@ -1,8 +1,8 @@
 # element-theme-ink-preview
 
-> Preview element-theme-ink.
+> [element-theme-ink](https://github.com/YunYouJun/element-theme-ink).
 
-Preview [element-theme-ink](https://github.com/YunYouJun/element-theme-ink).
+Preview : [element-theme-ink-preview](https://github.yunyoujun.cn/element-theme-ink-preview)
 
 ## Build Setup
 
