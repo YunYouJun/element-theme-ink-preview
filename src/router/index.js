@@ -18,6 +18,7 @@ Vue.component('footer-nav', FooterNav)
 
 const router = new Router({
   routes,
+  mode: 'history',
   scrollBehavior (to, from, savedPosition) {
     if (to.hash) {
       return {
@@ -30,7 +31,7 @@ const router = new Router({
 router.beforeEach((to, from, next) => {
   /* 路由发生变化修改页面title */
   if (to.meta.title) {
-    document.title = to.meta.title
+    document.title = 'Ink - ' + to.meta.title
   }
   next()
 })

@@ -86,8 +86,7 @@
     methods: {
       setNav() {
         let nav = navConfig;
-        this.nav = [nav[0]].concat(nav[1].children);
-        nav[2].groups.map(group => group.list).forEach(list => {
+        nav.groups.map(group => group.list).forEach(list => {
           this.nav = this.nav.concat(list);
         });
       },

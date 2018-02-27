@@ -6,6 +6,7 @@
     .content {
       padding-left: 25px;
       margin-left: -1px;
+
       h2 {
         margin-bottom: 10px;
       }
@@ -49,32 +50,35 @@
       }
     }
   }
-
-  @media (max-width: 768px) {
-    .page-guide {
-      .content {
-        padding-left: 0;
-      }
-    }
-  }
 </style>
 <template>
   <div class="page-container page-guide">
+    <guide></guide>
     <el-row>
-      <el-col :xs="24" :sm="5">
-        <side-nav :data="navsData" :base="`/guide`"></side-nav>
-      </el-col>
-      <el-col :xs="24" :sm="19">
+      <!-- <el-col :xs="24" :sm="5"> -->
+        <el-scrollbar class="page-component__nav">
+          <side-nav :data="navsData" :base="`/guide`"></side-nav>
+        </el-scrollbar>
+      <!-- </el-col> -->
+      <div class="page-component__content">
         <router-view class="content"></router-view>
-      </el-col>
+        <!-- <footer-nav></footer-nav> -->
+      </div>
+      <!-- <el-col :xs="24" :sm="19"> -->
+        <!-- <router-view class="content"></router-view> -->
+      <!-- </el-col> -->
     </el-row>
   </div>
 </template>
+
 <script>
+import guide from '../../README.md'
 export default {
+  components: {
+    guide
+  },
   data () {
     return {
-      lang: this.$route.meta.lang,
       navsData: [
         {
           path: '/design',

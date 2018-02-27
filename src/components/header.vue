@@ -12,9 +12,9 @@
           class="nav-logo-small">
       </slot>
     </el-menu-item>
-    <el-menu-item index="/resource" route="/resource">{{ navbar.resource }}</el-menu-item>
-    <el-menu-item index="/component" route="/component">{{ navbar.components }}</el-menu-item>
-    <el-menu-item index="/guide" route="/guide">{{ navbar.guide }}</el-menu-item>
+    <el-menu-item index="/resource">{{ navbar.resource }}</el-menu-item>
+    <el-menu-item index="/component">{{ navbar.components }}</el-menu-item>
+    <el-menu-item index="/guide">{{ navbar.guide }}</el-menu-item>
   </el-menu>
 </template>
 

@@ -20,29 +20,27 @@ const loadDocs = function (path) {
 
 const registerRoute = (navConfig) => {
   let route = []
-  let navs = navConfig
+  let nav = navConfig
   route.push({
     path: `/component`,
-    redirect: `/component/installation`,
+    redirect: `/component/alert`,
     component: load('component'),
     children: []
   })
-  navs.forEach(nav => {
-    if (nav.href) return
-    if (nav.groups) {
-      nav.groups.forEach(group => {
-        group.list.forEach(nav => {
-          addRoute(nav)
-        })
-      })
-    } else if (nav.children) {
-      nav.children.forEach(nav => {
+  if (nav.href) return
+  if (nav.groups) {
+    nav.groups.forEach(group => {
+      group.list.forEach(nav => {
         addRoute(nav)
       })
-    } else {
+    })
+  } else if (nav.children) {
+    nav.children.forEach(nav => {
       addRoute(nav)
-    }
-  })
+    })
+  } else {
+    addRoute(nav)
+  }
 
   function addRoute (page) {
     let path = page.path.slice(1)
@@ -71,16 +69,25 @@ const generateMiscRoutes = function () {
   let guideRoute = {
     path: `/guide`, // 指南
     redirect: `/guide/design`,
+    meta: {
+      title: '指南'
+    },
     component: load('guide'),
     children: [
       {
         path: 'design', // 设计原则
         name: 'guide-design',
-        component: load('design')
+        component: load('design'),
+        meta: {
+          title: '设计'
+        }
       }, {
         path: 'nav', // 导航
         name: 'guide-nav',
-        component: load('nav')
+        component: load('nav'),
+        meta: {
+          title: '导航'
+        }
       }
     ]
   }

@@ -61,6 +61,13 @@ hr{
   margin: 0 20px;
 }
 
+blockquote {
+  margin: 0;
+  padding: 0 15px;
+  color: #666;
+  border-left: 4px solid #ddd;
+}
+
 code {
   background-color: #f9fafc;
   padding: 0 4px;

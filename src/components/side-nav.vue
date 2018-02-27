@@ -5,18 +5,18 @@
     :class="{ 'is-fade': isFade }"
     :style="navStyle">
     <ul>
-      <li class="nav-item" :key="item.name" v-for="item in data">
-        <a v-if="!item.path && !item.href" @click="expandMenu">{{item.name}}</a>
-        <a v-if="item.href" :href="item.href" target="_blank">{{item.name}}</a>
+      <li class="nav-item" :key="data.name">
+        <a v-if="!data.path && !data.href" @click="expandMenu">{{data.name}}</a>
+        <a v-if="data.href" :href="data.href" target="_blank">{{data.name}}</a>
         <router-link
-          v-if="item.path"
+          v-if="data.path"
           active-class="active"
-          :to="base + item.path"
+          :to="base + data.path"
           exact
-          v-text="item.title || item.name">
+          v-text="data.title || data.name">
         </router-link>
-        <ul class="pure-menu-list sub-nav" v-if="item.children">
-          <li class="nav-item" :key="navItem.name" v-for="navItem in item.children">
+        <ul class="pure-menu-list sub-nav" v-if="data.children">
+          <li class="nav-item" :key="navItem.name" v-for="navItem in data.children">
             <router-link
               class=""
               active-class="active"
@@ -26,8 +26,8 @@
             </router-link>
           </li>
         </ul>
-        <template v-if="item.groups">
-          <div class="nav-group" :key="group.name" v-for="group in item.groups">
+        <template v-if="data.groups">
+          <div class="nav-group" :key="group.name" v-for="group in data.groups">
             <div class="nav-group__title" @click="expandMenu">{{group.groupName}}</div>
             <ul class="pure-menu-list">
               <li
