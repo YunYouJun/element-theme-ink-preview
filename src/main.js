@@ -5,9 +5,10 @@ import App from './App'
 import router from './router'
 
 import ElementUI from 'element-ui'
-// import 'element-ui/lib/theme-chalk/index.css'
-// import '../packages/element-theme-ink/lib/index.css'
 import '../packages/element-theme-ink/src/index.scss'
+
+// import 'element-ui/lib/theme-chalk/index.css'
+// import '../packages/element-theme-ink/lib/index.css's
 
 // Vue.config.productionTip = false
 
