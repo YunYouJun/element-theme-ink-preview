@@ -174,7 +174,7 @@
 
   export default {
     props: {
-      data: Array,
+      data: Object,
       base: {
         type: String,
         default: ''

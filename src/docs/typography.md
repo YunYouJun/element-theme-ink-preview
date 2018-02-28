@@ -1,4 +1,4 @@
-<style>
+<style lang="scss">
   .demo-typo-box {
     height: 200px;
     width: 200px;
@@ -28,123 +28,74 @@
       font-family: 'Helvetica Neue';
     }
   }
-  .demo-typo-size {
-    .h1 {
-      font-size: 20px;
-    }
-    .h2 {
-      font-size: 18px;
-    }
-    .h3 {
-      font-size: 16px;
-    }
-    .text-regular {
-      font-size: 14px;
-    }
-    .text-small {
-      font-size: 13px;
-    }
-    .text-smaller {
-      font-size: 12px;
-    }
-    .color-dark-light {
-      color: #99a9bf;
-    }
-  }
   .typo-PingFang {
     font-family: 'PingFang SC';
-  }
-  .typo-Hiragino {
-    font-family: 'Hiragino Sans GB';
   }
   .typo-Microsoft {
     font-family: 'Microsoft YaHei';
   }
   /* 英文 */
-  .typo-Helvetica-Neue {
-    font-family: 'Helvetica Neue';
-  }
-  .typo-Helvetica {
-    font-family: 'Helvetica';
-  }
   .typo-Arial {
     font-family: 'Arial';
+  }
+  .typo-Lato {
+    font-family: 'Lato';
+  }
+  .typo-weight-bold {
+    font-weight: bold;
+  }
+  .typo-weight-light {
+    font-weight: light;
   }
 </style>
 
 ## Typography 字体
 
-我们对字体进行统一规范，力求在各个操作系统下都有最佳展示效果。
+考虑兼容性
+
+以 `PingFang SC` `Microsoft YaHei` 字体为主， `Lato` 为辅
 
 ### 中文字体
 
 <div class="demo-typo-box typo-PingFang">
-  和畅惠风
+  苹果苹方
   <div class="name">PingFang SC</div>
 </div>
-<div class="demo-typo-box typo-Hiragino">
-  和畅惠风
-  <div class="name">Hiragino Sans GB</div>
-</div>
 <div class="demo-typo-box typo-Microsoft">
-  和畅惠风
+  微软雅黑
   <div class="name">Microsoft YaHei</div>
 </div>
 
 ### 英文／数字字体
 
-<div class="demo-typo-box typo-Helvetica-neue">
-  RGag
-  <div class="name">Helvetica Neue</div>
-</div>
-<div class="demo-typo-box typo-Helvetica">
-  RGag
-  <div class="name">Helvetica</div>
-</div>
 <div class="demo-typo-box typo-Arial">
   RGag
   <div class="name">Arial</div>
+</div>
+<div class="demo-typo-box typo-Lato">
+  RGag
+  <div class="name">Lato</div>
 </div>
 
 ### Font-family 代码
 
 ```css
-font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+font-family: Lato, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
 ```
 
-### 字体使用规范
+## font-weight 字重
 
-<table class="demo-typo-size">
+优先细体
+
+<table>
   <tbody>
     <tr>
-      <td class="h1">主标题</td>
-      <td class="h1">用 Element 快速搭建页面</td>
-      <td class="color-dark-light">20px  Extra large</td>
+      <td class="typo-weight-light">light</td>
+      <td class="typo-weight-light">用 Element 快速搭建页面</td>
     </tr>
     <tr>
-      <td class="h2">标题</td>
-      <td class="h2">用 Element 快速搭建页面</td>
-      <td class="color-dark-light">18px large</td>
-    </tr>
-    <tr>
-      <td class="h3">小标题</td>
-      <td class="h3">用 Element 快速搭建页面</td>
-      <td class="color-dark-light">16px Medium</td>
-    </tr>
-    <tr>
-      <td class="text-regular">正文</td>
-      <td class="text-regular">用 Element 快速搭建页面</td>
-      <td class="color-dark-light">14px Small</td>
-    </tr>
-    <tr>
-      <td class="text-small">正文（小）</td>
-      <td class="text-small">用 Element 快速搭建页面</td>
-      <td class="color-dark-light">13px Extra Small</td>
-    </tr>
-    <tr>
-      <td class="text-smaller">辅助文字</td>
-      <td class="text-smaller">用 Element 快速搭建页面</td>
-      <td class="color-dark-light">12px Extra Extra Small</td>
+      <td class="typo-weight-bold">bold</td>
+      <td class="typo-weight-bold">用 Element 快速搭建页面</td>
     </tr>
   </tbody>
 </table>

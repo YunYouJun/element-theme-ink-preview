@@ -98,8 +98,11 @@ module.exports = {
         test: /\.md$/,
         loader: 'vue-markdown-loader',
         options: {
+          preventExtract: true,
+          wrapper: 'section',
           // markdown-it config
           preset: 'default',
+          html: true,
           breaks: true,
           preprocess: function(MarkdownIt, source) {
             MarkdownIt.renderer.rules.table_open = function() {

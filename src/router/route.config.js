@@ -23,7 +23,7 @@ const registerRoute = (navConfig) => {
   let nav = navConfig
   route.push({
     path: `/component`,
-    redirect: `/component/alert`,
+    redirect: `/component/color`,
     component: load('component'),
     children: []
   })
@@ -68,25 +68,26 @@ let route = registerRoute(navConfig)
 const generateMiscRoutes = function () {
   let guideRoute = {
     path: `/guide`, // 指南
-    redirect: `/guide/design`,
+    redirect: `/guide/use`,
     meta: {
-      title: '指南'
+      title: '使用'
     },
     component: load('guide'),
     children: [
+      {
+        path: 'use', // 使用
+        name: 'guide-use',
+        component: load('use'),
+        meta: {
+          title: '使用'
+        }
+      },
       {
         path: 'design', // 设计原则
         name: 'guide-design',
         component: load('design'),
         meta: {
           title: '设计'
-        }
-      }, {
-        path: 'nav', // 导航
-        name: 'guide-nav',
-        component: load('nav'),
-        meta: {
-          title: '导航'
         }
       }
     ]
