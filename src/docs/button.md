@@ -1,21 +1,16 @@
-<style>
-  .demo-box.demo-button {
-    .el-row {
-      margin-bottom: 10px;
-    }
+<style lang="scss" scoped>
+  .el-button{
+    margin: 5px;
+  }
+  .el-button-group {
+    margin-bottom: 10px;
+
     .el-button + .el-button {
-      margin-left: 10px;
+      margin-left: 0;
     }
-    .el-button-group {
-      margin-bottom: 20px;
 
-      .el-button + .el-button {
-        margin-left: 0;
-      }
-
-      & + .el-button-group {
-        margin-left: 10px;
-      }
+    & + .el-button-group {
+      margin-left: 10px;
     }
   }
 </style>
@@ -23,11 +18,14 @@
 ## Button 按钮
 常用的操作按钮。
 
-### 基础用法
-
-基础的按钮用法。
+### 基础样式
 
 使用`type`、`plain`和`round`属性来定义 Button 的样式。
+
+增加 `type='dark'` 类型
+```html
+<el-button type='dark' plain>深色按钮</el-button>
+```
 
 <!-- <div>
   <el-button>默认按钮</el-button>
@@ -102,9 +100,5 @@
 </el-button-group>
 
 ### 加载中
-
-点击按钮后进行数据加载操作，在按钮上显示加载状态。
-
-要设置为 loading 状态，只要设置`loading`属性为`true`即可。
 
 <el-button plain :loading="true">加载中</el-button>
