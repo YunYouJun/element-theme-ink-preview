@@ -61,6 +61,10 @@ h4 {
   font-weight: normal;
 }
 
+.footer {
+  text-align: center;
+}
+
 .link-item {
   display: inline-block;
   font-size: 1rem;

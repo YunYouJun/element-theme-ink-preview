@@ -1,6 +1,3 @@
-<style lang="scss">
-
-</style>
 <template>
   <el-scrollbar class="page-component__scroll" ref="componentScrollBar">
   <div class="page-container page-component">

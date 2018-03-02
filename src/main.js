@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 
 import ElementUI from 'element-ui'
+import 'highlight.js/styles/color-brewer.css'
 import '../packages/element-theme-ink/src/index.scss'
 import './assets/styles/common.scss'
 

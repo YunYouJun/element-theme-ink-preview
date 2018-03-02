@@ -3,11 +3,11 @@
     <el-menu-item index="/" route="/">
       <slot>
         <img
-          src="../assets/images/element-logo.svg"
+          src="../assets/images/element-logo.png"
           alt="element-logo"
           class="nav-logo">
         <img
-          src="../assets/images/element-logo-small.svg"
+          src="../assets/images/element-logo-small.png"
           alt="element-logo"
           class="nav-logo-small">
       </slot>
@@ -32,6 +32,7 @@
 
   .nav-logo,
   .nav-logo-small {
+    max-height: 60%;
     vertical-align: middle;
   }
 
@@ -45,6 +46,7 @@
     }
     .nav-logo-small {
       display: inline-block;
+      max-height: 60%;
     }
   }
 </style>

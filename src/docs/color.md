@@ -67,6 +67,15 @@
     background-color: #f2f6fc;
   }
 
+  .bg-dark {
+    background-color: #303133;
+  }
+  .bg-light {
+    background-color: #fff;
+    color: #303133;
+    border: 1px solid #303133;
+  }
+
   [class*=" bg-border-"] {
     color: #303133;
   }
@@ -75,6 +84,19 @@
 ## Color 色彩
 
 Element 为了避免视觉传达差异，使用一套特定的调色板来规定颜色，为你所搭建的产品提供一致的外观视觉感受。
+
+### 主题色
+
+Element-Theme-Ink 决定以黑白色调为主。
+
+<el-row :gutter="12">
+  <el-col :span="12">
+    <div class="demo-color-box bg-dark">Black<div class="value">#303133</div></div>
+  </el-col>
+  <el-col :span="12">
+    <div class="demo-color-box bg-light">Info<div class="value">#fff</div></div>
+  </el-col>
+</el-row>
 
 ### 主色
 

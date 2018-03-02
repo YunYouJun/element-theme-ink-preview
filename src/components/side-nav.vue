@@ -81,7 +81,7 @@
       text-align: justify;
       a {
         font-size: 16px;
-        color: #333;
+        color: #999;
         line-height: 40px;
         height: 40px;
         margin: 0;
@@ -93,7 +93,7 @@
         font-weight: bold;
 
         &.active {
-          color: #409EFF;
+          color: #000;
         }
       }
 
@@ -101,17 +101,18 @@
         a {
           display: block;
           height: 40px;
-          color: #444;
+          color: #777;
           line-height: 40px;
           font-size: 14px;
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
-          font-weight: normal;
+          font-weight: 200;
 
           &:hover,
           &.active {
-            color: #409EFF;
+            color: #000;
+            font-weight: normal;
           }
         }
       }

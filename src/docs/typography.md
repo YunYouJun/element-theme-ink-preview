@@ -25,7 +25,6 @@
       line-height: 35px;
       text-align: left;
       text-indent: 10px;
-      font-family: 'Helvetica Neue';
     }
   }
   .typo-PingFang {
@@ -43,6 +42,9 @@
   }
   .typo-weight-bold {
     font-weight: bold;
+  }
+  .typo-weight-normal {
+    font-weight: normal;
   }
   .typo-weight-light {
     font-weight: light;
@@ -92,6 +94,10 @@ font-family: Lato, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
     <tr>
       <td class="typo-weight-light">light</td>
       <td class="typo-weight-light">用 Element 快速搭建页面</td>
+    </tr>
+    <tr>
+      <td class="typo-weight-normal">normal</td>
+      <td class="typo-weight-normal">用 Element 快速搭建页面</td>
     </tr>
     <tr>
       <td class="typo-weight-bold">bold</td>

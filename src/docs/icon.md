@@ -9,14 +9,14 @@
     }
   }
 </script>
-<style>
+<style lang="scss">
   .demo-icon .source > i {
     color: #606266;
     margin: 0 20px;
     font-size: 1.5em;
     vertical-align: middle;
   }
-  
+
   .demo-icon .source > button {
     margin: 0 20px;
   }
@@ -52,43 +52,32 @@
       font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',SimSun,sans-serif;
       color: #99a9bf;
     }
-    
+
     i {
       display: block;
       font-size: 32px;
       margin-bottom: 15px;
       color: #606266;
     }
-    
+
     .icon-name {
       display: inline-block;
       padding: 0 3px;
       height: 1em;
       color: #606266;
     }
-    
+
     &:hover {
       color: rgb(92, 182, 255);
     }
   }
 </style>
+
 ## Icon 图标
 
-提供了一套常用的图标集合。
+Element 自身提供了一套常用的[图标集合](http://element.eleme.io/#/zh-CN/component/icon)。也推荐使用 [Font Awesome](https://fontawesome.com/) 提供的更多图标。
 
-### 使用方法
-
-直接通过设置类名为 `el-icon-iconName` 来使用即可。例如：
-
-:::demo
-```html
-<i class="el-icon-edit"></i>
-<i class="el-icon-share"></i>
-<i class="el-icon-delete"></i>
-<el-button type="primary" icon="el-icon-search">搜索</el-button>
-
-```
-:::
+暂无自定义图标，后期可能增加自己设计的一些图标。
 
 ### 图标集合
 
