@@ -1,4 +1,4 @@
-<style>
+<style lang="scss">
   .demo-color-box {
     border-radius: 4px;
     padding: 20px;
@@ -6,16 +6,12 @@
     box-sizing: border-box;
     color: #fff;
     font-size: 14px;
-
-    & .value {
-      font-size: 12px;
-      opacity: 0.69;
-      line-height: 24px;
-    }
+    margin: 5px;
   }
   .demo-color-box-group {
     .demo-color-box {
       border-radius: 0;
+      margin: 0 5px;
     }
     .demo-color-box:first-child {
       border-radius: 4px 4px 0 0;
@@ -89,7 +85,7 @@ Element 为了避免视觉传达差异，使用一套特定的调色板来规定
 
 Element-Theme-Ink 决定以黑白色调为主。
 
-<el-row :gutter="12">
+<el-row>
   <el-col :span="12">
     <div class="demo-color-box bg-dark">Black<div class="value">#303133</div></div>
   </el-col>
@@ -102,7 +98,7 @@ Element-Theme-Ink 决定以黑白色调为主。
 
 Element 主要品牌颜色是鲜艳、友好的蓝色。
 
-<el-row :gutter="12">
+<el-row>
   <el-col :span="6">
     <div class="demo-color-box bg-blue">Blue<div class="value">#409EFF</div></div>
   </el-col>
@@ -112,7 +108,7 @@ Element 主要品牌颜色是鲜艳、友好的蓝色。
 
 除了主色外的场景色，需要在不同的场景中使用（例如危险色表示危险的操作）。
 
-<el-row :gutter="12">
+<el-row>
   <el-col :span="6">
     <div class="demo-color-box bg-success">Success<div class="value">#67C23A</div></div>
   </el-col>
@@ -131,7 +127,7 @@ Element 主要品牌颜色是鲜艳、友好的蓝色。
 
 中性色用于文本、背景和边框颜色。通过运用不同的中性色，来表现层次结构。
 
-<el-row :gutter="12">
+<el-row>
   <el-col :span="6">
     <div class="demo-color-box-group">
       <div class="demo-color-box bg-text-primary">主要文字<div class="value">#303133</div></div>

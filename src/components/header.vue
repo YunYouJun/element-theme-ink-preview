@@ -3,9 +3,10 @@
     <el-menu-item index="/" route="/">
       <slot>
         <img
-          src="../assets/images/element-logo.png"
+          src="../assets/images/element-logo-small.png"
           alt="element-logo"
           class="nav-logo">
+          <span class="nav-logo" style="font-size: 1.5rem;">{{ navbar.brand }}</span>
         <img
           src="../assets/images/element-logo-small.png"
           alt="element-logo"
@@ -46,45 +47,40 @@
     }
     .nav-logo-small {
       display: inline-block;
-      max-height: 60%;
     }
   }
 </style>
 
 <script>
-/* eslint-disable */
-  export default {
-    data() {
-      return {
-        navbar: {
-          guide: '指南',
-          components: '组件',
-          resource: '资源'
-        }
-      };
-    },
-
-    computed: {
-      isComponentPage() {
-        return /^component/.test(this.$route.name);
-      },
-      activeIndex() {
-        let index = '/'
-        if(this.$route.path != '/'){
-          index = this.$route.matched[0].path
-        }
-        return index
+export default {
+  data () {
+    return {
+      navbar: {
+        brand: 'Ink',
+        guide: '指南',
+        components: '组件',
+        resource: '资源'
       }
-    },
+    }
+  },
 
-    methods: {
-      handleSelect(key, keyPath) {
-        // console.log(key, keyPath);
-      }
+  computed: {
+    isComponentPage () {
+      return /^component/.test(this.$route.name)
     },
-    beforeUpdate:function(){
-        // this.activeIndex = this.$route.matched[1].path
-        // this.activeIndex = '/resource'
+    activeIndex () {
+      let index = '/'
+      if (this.$route.path !== '/') {
+        index = this.$route.matched[0].path
+      }
+      return index
+    }
+  },
+
+  methods: {
+    handleSelect (key, keyPath) {
+      // console.log(key, keyPath)
     }
   }
+}
 </script>

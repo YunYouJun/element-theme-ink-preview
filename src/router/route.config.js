@@ -96,13 +96,19 @@ const generateMiscRoutes = function () {
   let resourceRoute = {
     path: `/resource`, // 资源
     name: 'resource',
-    component: load('resource')
+    component: load('resource'),
+    meta: {
+      title: '资源'
+    }
   }
 
   let indexRoute = {
     path: `/`, // 首页
     name: 'home',
-    component: load('index')
+    component: load('index'),
+    meta: {
+      title: 'Theme'
+    }
   }
 
   return [guideRoute, resourceRoute, indexRoute]

@@ -116,6 +116,7 @@ module.exports = {
               level: 2,
               slugify: slugify,
               permalink: true,
+              permalinkSymbol: '#',
               permalinkBefore: true
             }],
             [require('markdown-it-container'), 'tip'],
