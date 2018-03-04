@@ -2,9 +2,9 @@
   <div class="footer">
     <hr>
     <div class="container">
-      <h4 class="copyright">
+      <div class="copyright">
         Element-Theme-Ink <i class="fas fa-cloud"></i> {{ copyright }}
-      </h4>
+      </div>
       <div class="link">
         <el-tooltip v-for="(link, key) in links" :key="key" class="item" effect="light" :content="link.label" placement="top">
           <a class="link-item" :style="{color: link.color, borderColor: link.color}" :href="link.href" target="_blank">
@@ -63,6 +63,11 @@ h4 {
 
 .footer {
   text-align: center;
+}
+
+.copyright {
+  font-size: .9rem;
+  padding-bottom: 10px;
 }
 
 .link-item {

@@ -19,13 +19,6 @@ blockquote {
   border-left: 4px solid #ddd;
 }
 
-code {
-  background-color: #f9fafc;
-  padding: 0 4px;
-  border: 1px solid #eaeefb;
-  border-radius: 4px;
-}
-
 .hljs {
   line-height: 1.8;
   font-family: Menlo, Monaco, Consolas, Courier, monospace;
@@ -69,11 +62,25 @@ code {
 // markdown
 
 section {
-  h1, h2, h3, {
+  h1, h2, h3, h4, h5, h6 {
     padding-top: 80px;
-    margin-left: -10px; 
     margin-top: -60px;
     margin-bottom: 20px;
+
+    &:hover a {
+      opacity: .4;
+    }
+
+    a {
+      float: left;
+      margin-left: -20px;
+      opacity: 0;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 
   code {

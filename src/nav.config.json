@@ -5,6 +5,10 @@
       "groupName": "Basic",
       "list": [
         {
+          "path": "/reset",
+          "title": "Reset 重置"
+        },
+        {
           "path": "/color",
           "title": "Color 色彩"
         },
