@@ -1,6 +1,6 @@
 <template>
   <el-menu :router="true" :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-    <el-menu-item index="/" route="/">
+    <el-menu-item index="/" route="/" class="is-glow">
       <slot>
         <img
           src="../assets/images/element-logo-small.png"
@@ -39,6 +39,17 @@
 
   .nav-logo-small {
     display: none;
+  }
+
+  .is-glow {
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: glowing;
+    @keyframes glowing {
+      from { text-shadow: 0 0 0 rgba(#000, 0.1);}
+      50% { text-shadow: 0 0 1px rgba(#000, 0.5);}
+      to { text-shadow: 0 0 0 rgba(#000, 0.1);}
+    }
   }
 
   @media (max-width: 850px) {

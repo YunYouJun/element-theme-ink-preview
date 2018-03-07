@@ -1,14 +1,14 @@
 <template>
   <el-row class="welcome">
     <el-col :span="24">
-      <i class="el-icon-edit"></i>
+      <i class="el-icon-edit is-glow"></i>
       <br>
-      <h1>{{ header }}</h1>
+      <h1 class="is-glow">{{ header }}</h1>
       <p>{{ description }}</p>
       <br>
       <el-steps :active="1" finish-status="success" :align-center="true">
         <el-step title="脚手架" description="预览网站"></el-step>
-        <el-step title="开发中" description="几个月？"></el-step>
+        <el-step class="is-glow" title="开发中" description="几个月？"></el-step>
         <el-step title="发布"></el-step>
       </el-steps>
     </el-col>
@@ -40,6 +40,17 @@ export default {
   text-align: center;
   .el-icon-edit {
     font-size: 200px;
+  }
+
+  .is-glow {
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: glowing;
+    @keyframes glowing {
+      from { text-shadow: 0 0 0 rgba(#000, 0.1);}
+      50% { text-shadow: 0 0 5px rgba(#000, 0.3);}
+      to { text-shadow: 0 0 0 rgba(#000, 0.1);}
+    }
   }
 }
 </style>

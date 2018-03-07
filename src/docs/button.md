@@ -16,7 +16,7 @@
 </style>
 
 ## Button 按钮
-常用的操作按钮。
+常用的操作按钮。优先推荐使用与本主题风格统一的 `plain` 样式。
 
 ### 基础样式
 
@@ -27,7 +27,7 @@
 <el-button type='dark' plain>深色按钮</el-button>
 ```
 
-<!-- <div>
+<div>
   <el-button>默认按钮</el-button>
   <el-button type="dark">深色按鈕</el-button>
   <el-button type="primary">主要按钮</el-button>
@@ -35,7 +35,7 @@
   <el-button type="info">信息按钮</el-button>
   <el-button type="warning">警告按钮</el-button>
   <el-button type="danger">危险按钮</el-button>
-</div> -->
+</div>
 
 <div style="margin: 20px 0">
   <el-button plain>朴素按钮</el-button>
@@ -57,13 +57,41 @@
   <el-button type="danger" plain round>危险按钮</el-button>
 </div>
 
+### Glow 效果
+
+未修改 Element 组件， 因此通过引用 `is-glow` 样式实现。
+
+```html
+<el-button class="is-glow">Glow 按钮</el-button>
+```
+
+<div style="margin: 20px 0">
+  <el-button class="is-glow" glow>朴素按钮</el-button>
+  <el-button class="is-glow" type="dark" glow>深色按钮</el-button>
+  <el-button class="is-glow" type="primary" glow>主要按钮</el-button>
+  <el-button class="is-glow" type="success" glow>成功按钮</el-button>
+  <el-button class="is-glow" type="info" glow>信息按钮</el-button>
+  <el-button class="is-glow" type="warning" glow>警告按钮</el-button>
+  <el-button class="is-glow" type="danger" glow>危险按钮</el-button>
+</div>
+
+<div style="margin: 20px 0">
+  <el-button class="is-glow" plain glow>朴素按钮</el-button>
+  <el-button class="is-glow" type="dark" plain glow>深色按钮</el-button>
+  <el-button class="is-glow" type="primary" plain glow>主要按钮</el-button>
+  <el-button class="is-glow" type="success" plain glow>成功按钮</el-button>
+  <el-button class="is-glow" type="info" plain glow>信息按钮</el-button>
+  <el-button class="is-glow" type="warning" plain glow>警告按钮</el-button>
+  <el-button class="is-glow" type="danger" plain glow>危险按钮</el-button>
+</div>
+
 ### 禁用状态
 
 按钮不可用状态。
 
 你可以使用`disabled`属性来定义按钮是否可用，它接受一个`Boolean`值。
 
-<!-- <div>
+<div>
   <el-button disabled>默认按钮</el-button>
   <el-button type="dark" disabled>深色按钮</el-button>
   <el-button type="primary" disabled>主要按钮</el-button>
@@ -71,7 +99,7 @@
   <el-button type="info" disabled>信息按钮</el-button>
   <el-button type="warning" disabled>警告按钮</el-button>
   <el-button type="danger" disabled>危险按钮</el-button>
-</div> -->
+</div>
 
 <div style="margin-top: 20px">
   <el-button plain disabled>朴素按钮</el-button>

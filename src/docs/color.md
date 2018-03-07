@@ -1,4 +1,5 @@
 <style lang="scss">
+@import "../../packages/element-theme-ink/src/common/var";
   .demo-color-box {
     border-radius: 4px;
     padding: 20px;
@@ -21,20 +22,20 @@
     }
   }
   .bg-blue {
-    background-color: #409EFF;
+    background-color: $--color-primary;
   }
 
   .bg-success {
-    background-color: #67C23A;
+    background-color: $--color-success;
   }
   .bg-warning {
-    background-color: #E6A23C;
+    background-color: $--color-warning;
   }
   .bg-danger {
-    background-color: #F56C6C;
+    background-color: $--color-danger;
   }
   .bg-info {
-    background-color: #909399;
+    background-color: $--color-info;
   }
 
   .bg-text-primary {
@@ -85,6 +86,8 @@ Element 为了避免视觉传达差异，使用一套特定的调色板来规定
 
 Element-Theme-Ink 决定以黑白色调为主。
 
+文本选中时，色彩也为黑白。
+
 <el-row>
   <el-col :span="12">
     <div class="demo-color-box bg-dark">Black<div class="value">#303133</div></div>
@@ -94,32 +97,27 @@ Element-Theme-Ink 决定以黑白色调为主。
   </el-col>
 </el-row>
 
-### 主色
-
-Element 主要品牌颜色是鲜艳、友好的蓝色。
-
-<el-row>
-  <el-col :span="12">
-    <div class="demo-color-box bg-blue">Blue<div class="value">#409EFF</div></div>
-  </el-col>
-</el-row>
-
 ### 辅助色
 
 除了主色外的场景色，需要在不同的场景中使用（例如危险色表示危险的操作）。
 
+参考 [Semantic-UI](https://semantic-ui.com) 使用更为鲜艳的颜色。
+
 <el-row>
   <el-col :span="6" :xs="{span: 12}">
-    <div class="demo-color-box bg-success">Success<div class="value">#67C23A</div></div>
+    <div class="demo-color-box bg-blue">Blue<div class="value">#0078E7</div></div>
   </el-col>
   <el-col :span="6" :xs="{span: 12}">
-    <div class="demo-color-box bg-warning">Warning<div class="value">#E6A23C</div></div>
+    <div class="demo-color-box bg-success">Success<div class="value">#21ba45</div></div>
   </el-col>
   <el-col :span="6" :xs="{span: 12}">
-    <div class="demo-color-box bg-danger">Danger<div class="value">#F56C6C</div></div>
+    <div class="demo-color-box bg-warning">Warning<div class="value">#f2711c</div></div>
   </el-col>
   <el-col :span="6" :xs="{span: 12}">
-    <div class="demo-color-box bg-info">Info<div class="value">#909399</div></div>
+    <div class="demo-color-box bg-danger">Danger<div class="value">#db2828</div></div>
+  </el-col>
+  <el-col :span="6" :xs="{span: 12}">
+    <div class="demo-color-box bg-info">Info<div class="value">#42B8DD</div></div>
   </el-col>
 </el-row>
 

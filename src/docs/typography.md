@@ -41,13 +41,13 @@
     font-family: 'Lato';
   }
   .typo-weight-bold {
-    font-weight: bold;
+    font-weight: 600;
   }
   .typo-weight-normal {
-    font-weight: normal;
+    font-weight: 400;
   }
   .typo-weight-light {
-    font-weight: light;
+    font-weight: 300;
   }
 </style>
 
@@ -87,21 +87,31 @@ font-family: Lato, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
 
 ## font-weight 字重
 
-优先细体
+默认使用细体， `font-weight` 为 `300`。
 
 <table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Font-Weight</th>
+      <th>Example</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
       <td class="typo-weight-light">light</td>
-      <td class="typo-weight-light">用 Element 快速搭建页面</td>
+      <td class="typo-weight-light">300</td>
+      <td class="typo-weight-light">用 Element-Theme-Ink 快速搭建页面</td>
     </tr>
     <tr>
       <td class="typo-weight-normal">normal</td>
-      <td class="typo-weight-normal">用 Element 快速搭建页面</td>
+      <td class="typo-weight-normal">400</td>
+      <td class="typo-weight-normal">用 Element-Theme-Ink 快速搭建页面</td>
     </tr>
     <tr>
       <td class="typo-weight-bold">bold</td>
-      <td class="typo-weight-bold">用 Element 快速搭建页面</td>
+      <td class="typo-weight-bold">600</td>
+      <td class="typo-weight-bold">用 Element-Theme-Ink 快速搭建页面</td>
     </tr>
   </tbody>
 </table>
