@@ -24,7 +24,6 @@
   .bg-blue {
     background-color: $--color-primary;
   }
-
   .bg-success {
     background-color: $--color-success;
   }
@@ -84,16 +83,21 @@ Element 为了避免视觉传达差异，使用一套特定的调色板来规定
 
 ### 主题色
 
-Element-Theme-Ink 决定以黑白色调为主。
+Element-Theme-Ink 决定以黑白蓝色调为主。
 
 文本选中时，色彩也为黑白。
 
+黑蓝墨水
+
 <el-row>
-  <el-col :span="12">
+  <el-col :span="8">
     <div class="demo-color-box bg-dark">Black<div class="value">#303133</div></div>
   </el-col>
-  <el-col :span="12">
+  <el-col :span="8">
     <div class="demo-color-box bg-light">Info<div class="value">#fff</div></div>
+  </el-col>
+  <el-col :span="8">
+    <div class="demo-color-box bg-blue">Blue<div class="value">#0078E7</div></div>
   </el-col>
 </el-row>
 
@@ -104,9 +108,6 @@ Element-Theme-Ink 决定以黑白色调为主。
 参考 [Semantic-UI](https://semantic-ui.com) 使用更为鲜艳的颜色。
 
 <el-row>
-  <el-col :span="6" :xs="{span: 12}">
-    <div class="demo-color-box bg-blue">Blue<div class="value">#0078E7</div></div>
-  </el-col>
   <el-col :span="6" :xs="{span: 12}">
     <div class="demo-color-box bg-success">Success<div class="value">#21ba45</div></div>
   </el-col>
