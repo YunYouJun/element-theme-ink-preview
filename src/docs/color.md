@@ -105,7 +105,7 @@ Element-Theme-Ink 决定以黑白蓝色调为主。
 参考 [Semantic-UI](https://semantic-ui.com) 使用更为鲜艳的颜色。
 
 <el-row>
-  <el-col :span="6">
+  <el-col :span="6" :xs="{span: 12}">
     <div class="demo-color-box bg-blue">Blue<div class="value">#0078E7</div></div>
   </el-col>
   <el-col :span="6" :xs="{span: 12}">
