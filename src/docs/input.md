@@ -24,67 +24,14 @@
 </script>
 
 <style lang="scss">
-  .el-select .el-input {
-    width: 130px;
-  }
   .el-input {
-    width: 180px;
+    width: 200px;
   }
   .el-textarea {
     width: 414px;
   }
   .el-input-group {
     width: 100%;
-  }
-  .demo-input-size {
-    .el-input {
-      vertical-align: top;
-      margin: 0 10px 10px 0;
-    }
-  }
-  .input-with-select .el-input-group__prepend {
-    background-color: #fff;
-  }
-  .demo-autocomplete {
-    text-align: center;
-
-    .sub-title {
-      margin-bottom: 10px;
-      font-size: 14px;
-      color: #8492a6;
-    }
-
-    .el-col:not(:last-child) {
-      border-right: 1px solid rgba(224,230,237,0.50);
-    }
-
-    .el-autocomplete {
-      text-align: left;
-    }
-  }
-  .el-autocomplete-suggestion.my-autocomplete {
-    li {
-      line-height: normal;
-      padding: 7px;
-
-      .name {
-        text-overflow: ellipsis;
-        overflow: hidden;
-      }
-      .addr {
-        font-size: 12px;
-        color: #b4b4b4;
-      }
-      .highlighted .addr {
-        color: #ddd;
-      }
-    }
-  }
-  .demo-input-suffix {
-    margin-bottom: 15px;
-    .el-input {
-      margin-right: 15px;
-    }
   }
 </style>
 
@@ -178,7 +125,7 @@
 
 <div>
   <el-input placeholder="请输入内容" v-model="input3">
-    <template slot="prepend">Http://</template>
+    <template slot="prepend">http://</template>
   </el-input>
 </div>
 <div style="margin-top: 15px;">
