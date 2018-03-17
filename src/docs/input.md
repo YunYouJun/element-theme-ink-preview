@@ -61,9 +61,7 @@
 
 可以通过 `prefix-icon` 和 `suffix-icon` 属性在 input 组件首部和尾部增加显示图标，也可以通过 slot 来放置图标。
 
-<div>
-<div class="demo-input-suffix">
-  属性方式：
+<el-card>
   <el-input
     placeholder="请选择日期"
     suffix-icon="el-icon-date"
@@ -74,35 +72,24 @@
     prefix-icon="el-icon-search"
     v-model="input1">
   </el-input>
-</div>
-<div class="demo-input-suffix">
-  slot 方式：
-  <el-input
-    placeholder="请选择日期"
-    v-model="input2">
-    <i slot="suffix" class="el-input__icon el-icon-date"></i>
-  </el-input>
-  <el-input
-    placeholder="请输入内容"
-    v-model="input3">
-    <i slot="prefix" class="el-input__icon el-icon-search"></i>
-  </el-input>
-</div>
-</div>
+</el-card>
 
 ### 文本域
 
-<el-input
-  type="textarea"
-  :rows="2"
-  placeholder="请输入内容"
-  v-model="textarea">
-</el-input>
+<el-card>
+  <el-input
+    type="textarea"
+    :rows="2"
+    placeholder="请输入内容"
+    v-model="textarea">
+  </el-input>
+</el-card>
 
 ### 可自适应文本高度的文本域
 
 通过设置 `autosize` 属性可以使得文本域的高度能够根据文本内容自动进行调整，并且 `autosize` 还可以设定为一个对象，指定最小行数和最大行数。
 
+<el-card>
 <el-input
   type="textarea"
   autosize
@@ -116,6 +103,7 @@
   placeholder="请输入内容"
   v-model="textarea3">
 </el-input>
+</el-card>
 
 ### 复合型输入框
 
@@ -123,6 +111,7 @@
 
 可通过 slot 来指定在 input 中前置或者后置内容。
 
+<el-card>
 <div>
   <el-input placeholder="请输入内容" v-model="input3">
     <template slot="prepend">http://</template>
@@ -143,31 +132,35 @@
     <el-button slot="append" icon="el-icon-search"></el-button>
   </el-input>
 </div>
+</el-card>
 
 ### 尺寸
 
-<div class="demo-input-size">
+<el-card>
   <el-input
     placeholder="请输入内容"
     suffix-icon="el-icon-date"
     v-model="input6">
   </el-input>
+  <hr>
   <el-input
     size="medium"
     placeholder="请输入内容"
     suffix-icon="el-icon-date"
     v-model="input7">
   </el-input>
+  <hr>
   <el-input
     size="small"
     placeholder="请输入内容"
     suffix-icon="el-icon-date"
     v-model="input8">
   </el-input>
+  <hr>
   <el-input
     size="mini"
     placeholder="请输入内容"
     suffix-icon="el-icon-date"
     v-model="input9">
   </el-input>
-</div>
+</el-card>

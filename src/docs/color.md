@@ -67,8 +67,16 @@
     background-color: #303133;
   }
   .bg-light {
-    background-color: #fff;
+    background-color: #fafbfc;
     color: #303133;
+    border: 1px solid #303133;
+  }
+  .bg-black {
+    background-color: #000;
+  }
+  .bg-white {
+    background-color: #fff;
+    color: #000;
     border: 1px solid #303133;
   }
 
@@ -83,18 +91,24 @@ Element 为了避免视觉传达差异，使用一套特定的调色板来规定
 
 ### 主题色
 
-Element-Theme-Ink 决定以黑白蓝色调为主。
+Element-Theme-Ink 决定以黑白色调为主。
 
 文本选中时，色彩也为黑白。
 
-黑蓝墨水
+暗亮
 
 <el-row>
-  <el-col :span="12">
-    <div class="demo-color-box bg-dark">Black<div class="value">#303133</div></div>
+  <el-col :span="6" :xs="{span: 12}">
+    <div class="demo-color-box bg-dark">Dark<div class="value">#303133</div></div>
   </el-col>
-  <el-col :span="12">
-    <div class="demo-color-box bg-light">Info<div class="value">#fff</div></div>
+  <el-col :span="6" :xs="{span: 12}">
+    <div class="demo-color-box bg-light">Light<div class="value">#fafbfc</div></div>
+  </el-col>
+  <el-col :span="6" :xs="{span: 12}">
+    <div class="demo-color-box bg-black">Black<div class="value">#000</div></div>
+  </el-col>
+  <el-col :span="6" :xs="{span: 12}">
+    <div class="demo-color-box bg-white">White<div class="value">#fff</div></div>
   </el-col>
 </el-row>
 
