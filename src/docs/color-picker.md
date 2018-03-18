@@ -2,7 +2,7 @@
   export default {
     data() {
       return {
-        color1: '#409EFF',
+        color1: '#000',
         color2: null,
         color3: 'rgba(19, 206, 102, 0.8)',
         color4: '#409EFF'
@@ -33,6 +33,8 @@
 用于颜色选择，支持多种格式。
 
 ### 基础用法
+
+[ColorPicker](http://element.eleme.io/#/zh-CN/component/color-picker)
 
 使用 v-model 与 Vue 实例中的一个变量进行双向绑定，绑定的变量需要是字符串类型。
 
