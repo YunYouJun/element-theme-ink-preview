@@ -88,10 +88,6 @@
         {
           "path": "/transfer",
           "title": "Transfer 穿梭框"
-        },
-        {
-          "path": "/form",
-          "title": "Form 表单"
         }
       ]
     },
