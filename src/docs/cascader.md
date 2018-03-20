@@ -218,13 +218,6 @@
       this.optionsWithDisabled = JSON.parse(JSON.stringify(this.options));
       this.optionsWithDisabled[0].disabled = true;
     },
-    mounted() {
-      this.$nextTick(() => {
-        const demos = document.querySelectorAll('.source');
-        demos[0].style.padding = '0';
-        demos[demos.length - 1].style.padding = '0';
-      });
-    },
     methods: {
       handleItemChange(val) {
         console.log('active item:', val);
