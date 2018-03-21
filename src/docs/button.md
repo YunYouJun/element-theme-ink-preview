@@ -103,6 +103,13 @@
   <el-button type="danger" plain disabled>危险按钮</el-button>
 </el-card>
 
+### 文字按钮
+
+没有边框和背景色的按钮。
+
+<el-button type="text">文字按钮</el-button>
+<el-button type="text" disabled>文字按钮</el-button>
+
 ### 按钮组
 
 以按钮组的方式出现，常用于多项类似操作。
