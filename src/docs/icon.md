@@ -9,15 +9,15 @@
     }
   }
 </script>
-<style lang="scss">
-  .demo-icon .source > i {
+<style lang="scss" scoped>
+  .source > i {
     color: #606266;
     margin: 0 20px;
     font-size: 1.5em;
     vertical-align: middle;
   }
 
-  .demo-icon .source > button {
+  .source > button {
     margin: 0 20px;
   }
 
