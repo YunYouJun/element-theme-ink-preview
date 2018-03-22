@@ -1,6 +1,7 @@
 <template>
   <design></design>
 </template>
+
 <script>
 import design from '../../packages/element-theme-ink/design.md'
 

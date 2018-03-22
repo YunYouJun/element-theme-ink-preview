@@ -35,42 +35,6 @@
     }]
   }];
 
-  const data2 = [{
-    id: 1,
-    label: '一级 1',
-    children: [{
-      id: 4,
-      label: '二级 1-1',
-      children: [{
-        id: 9,
-        label: '三级 1-1-1'
-      }, {
-        id: 10,
-        label: '三级 1-1-2'
-      }]
-    }]
-  }, {
-    id: 2,
-    label: '一级 2',
-    children: [{
-      id: 5,
-      label: '二级 2-1'
-    }, {
-      id: 6,
-      label: '二级 2-2'
-    }]
-  }, {
-    id: 3,
-    label: '一级 3',
-    children: [{
-      id: 7,
-      label: '二级 3-1'
-    }, {
-      id: 8,
-      label: '二级 3-2'
-    }]
-  }];
-
   const data3 = [{
     id: 1,
     label: '一级 2',
@@ -174,7 +138,6 @@
     data() {
       return {
         data,
-        data2,
         data3,
         regions,
         defaultProps,
@@ -196,7 +159,9 @@
 
 基础的树形结构展示。
 
+<el-card>
 <el-tree :data="data" :props="defaultProps" @node-click="handleNodeClick"></el-tree>
+</el-card>
 
 ### 可选择
 
@@ -204,6 +169,7 @@
 
 本例还展示了动态加载节点数据的方法。
 
+<el-card>
 <el-tree
   :props="props"
   :load="loadNode"
@@ -211,12 +177,14 @@
   show-checkbox
   @check-change="handleCheckChange">
 </el-tree>
+</el-card>
 
 ### 禁用状态
 可将 Tree 的某些节点设置为禁用状态
 
 通过`disabled`设置禁用状态。
 
+<el-card>
 <el-tree
   :data="data3"
   show-checkbox
@@ -224,3 +192,4 @@
   :default-expanded-keys="[2, 3]"
   :default-checked-keys="[5]">
 </el-tree>
+</el-card>
