@@ -1,4 +1,4 @@
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../../packages/element-theme-ink/src/common/var";
   .demo-color-box {
     border-radius: 4px;
@@ -35,6 +35,9 @@
   }
   .bg-info {
     background-color: $--color-info;
+  }
+  .bg-purple {
+    background-color: $--color-purple;
   }
 
   .bg-text-primary {
@@ -133,6 +136,12 @@ Element-Theme-Ink 决定以黑白色调为主。
   </el-col>
   <el-col :span="6" :xs="{span: 12}">
     <div class="demo-color-box bg-info">Info<div class="value">#42B8DD</div></div>
+  </el-col>
+  <el-col :span="6" :xs="{span: 12}">
+    <div class="demo-color-box bg-purple">Purple<div class="value">#8e71c1</div></div>
+  </el-col>
+  <el-col :span="6" :xs="{span: 12}">
+    <div class="demo-color-box bg-gray">Gray<div class="value">#eee</div></div>
   </el-col>
 </el-row>
 
