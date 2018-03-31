@@ -2,7 +2,7 @@
 
 > [element-theme-ink](https://github.com/YunYouJun/element-theme-ink).
 
-Preview : [element-theme-ink-preview](https://github.yunyoujun.cn/element-theme-ink-preview)
+Preview : [element-theme-ink-preview](https://ink.yunyoujun.cn/)
 
 ## Build Setup
 
