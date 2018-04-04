@@ -84,7 +84,7 @@
   },
   "dependencies": {
     "element-theme-ink": "0.0.3",
-    "element-ui": "^2.2.0",
+    "element-ui": "^2.3.2",
     "gh-pages": "^1.1.0",
     "markdown-it": "^8.4.1",
     "vue": "^2.5.13",
