@@ -16,10 +16,16 @@
 
 增加 `type='dark'` 类型
 ```html
+<el-button type='light' plain>浅色按钮</el-button>
 <el-button type='dark' plain>深色按钮</el-button>
 ```
 
 <el-card>
+<el-row style="background-color: #333;">
+  <el-button type="light">浅色按鈕</el-button>
+  <el-button type="light" plain>浅色按鈕</el-button>
+</el-row>
+<hr>
 <el-row>
   <el-button>默认按钮</el-button>
   <el-button type="dark">深色按鈕</el-button>
