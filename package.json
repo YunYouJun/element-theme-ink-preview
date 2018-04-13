@@ -8,6 +8,7 @@
     "ink",
     "preview"
   ],
+  "private": "true",
   "main": "src/main.js",
   "repository": {
     "type": "git",
@@ -22,7 +23,8 @@
     "build": "node build/build.js",
     "build:theme": "gulp build --gulpfile packages/element-theme-ink/gulpfile.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "publish:theme": "cd packages/element-theme-ink && npm version patch && npm publish"
   },
   "bugs": {
     "url": "https://github.com/YunYouJun/element-theme-ink-preview/issues"
