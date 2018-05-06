@@ -60,7 +60,7 @@
 
 通过组件`slot`来设置下拉触发的元素以及需要通过具名`slot`为`dropdown` 来设置下拉菜单。默认情况下，下拉按钮只要`hover`即可，无需点击也会显示下拉菜单。
 
-<el-card>
+<el-card shadow="hover">
 <el-dropdown>
   <span class="el-dropdown-link">
     下拉菜单<i class="el-icon-arrow-down el-icon--right"></i>
@@ -81,7 +81,7 @@
 
 设置`split-button`属性来让触发下拉元素呈现为按钮组，左边是功能按钮，右边是触发下拉菜单的按钮，设置为`true`即可。
 
-<el-card>
+<el-card shadow="hover">
 <el-dropdown>
   <el-button type="dark">
     更多菜单<i class="el-icon-arrow-down el-icon--right"></i>
@@ -112,7 +112,7 @@ Dropdown 组件提供除了默认值以外的三种尺寸，可以在不同场�
 
 额外的尺寸：`medium`、`small`、`mini`，通过设置`size`属性来配置它们。
 
-<el-card>
+<el-card shadow="hover">
 <el-dropdown split-button type="primary">
   默认尺寸
   <el-dropdown-menu slot="dropdown">

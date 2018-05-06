@@ -96,7 +96,7 @@
 
 适用性广泛的通知栏
 
-<el-card>
+<el-card shadow="hover">
   <el-button
     plain
     @click="open">
@@ -115,7 +115,7 @@
 
 :::demo Element 为 Notification 组件准备了四种通知类型：`success`, `warning`, `info`, `error`。通过`type`字段来设置，除此以外的值将被忽略。同时，我们也为 Notification 的各种 type 注册了方法，可以在不传入`type`字段的情况下像`open5`和`open6`那样直接调用。
 
-<el-card>
+<el-card shadow="hover">
   <el-button
     plain
     @click="open3">
@@ -144,7 +144,7 @@
 
 使用`position`属性定义 Notification 的弹出位置，支持四个选项：`top-right`、`top-left`、`bottom-right`、`bottom-left`，默认为`top-right`。
 
-<el-card>
+<el-card shadow="hover">
   <el-button
     plain
     @click="open7">

@@ -29,7 +29,7 @@
 
 Alert 组件提供四种主题，由`type`属性指定，默认值为`info`。
 
-<el-card>
+<el-card shadow="hover">
   <el-alert
     title="成功提示的文案"
     type="success"

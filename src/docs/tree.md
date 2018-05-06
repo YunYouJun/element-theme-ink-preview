@@ -159,7 +159,7 @@
 
 基础的树形结构展示。
 
-<el-card>
+<el-card shadow="hover">
 <el-tree :data="data" :props="defaultProps" @node-click="handleNodeClick"></el-tree>
 </el-card>
 
@@ -169,7 +169,7 @@
 
 本例还展示了动态加载节点数据的方法。
 
-<el-card>
+<el-card shadow="hover">
 <el-tree
   :props="props"
   :load="loadNode"
@@ -184,7 +184,7 @@
 
 通过`disabled`设置禁用状态。
 
-<el-card>
+<el-card shadow="hover">
 <el-tree
   :data="data3"
   show-checkbox

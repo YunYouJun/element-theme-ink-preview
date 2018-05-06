@@ -38,7 +38,7 @@
 
 使用 v-model 与 Vue 实例中的一个变量进行双向绑定，绑定的变量需要是字符串类型。
 
-<el-card>
+<el-card shadow="hover">
   <el-col :span="12" class="block">
     <span class="demonstration">有默认值</span>
     <el-color-picker v-model="color1"></el-color-picker>

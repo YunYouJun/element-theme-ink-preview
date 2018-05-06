@@ -38,7 +38,7 @@
 
 不同状态，用来显示「成功、警告、消息、错误」类的操作反馈。
 
-<el-card>
+<el-card shadow="hover">
   <el-button :plain="true" @click="open">消息</el-button>
   <el-button :plain="true" @click="open2">成功</el-button>
   <el-button :plain="true" @click="open3">警告</el-button>

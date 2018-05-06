@@ -382,7 +382,7 @@
 
 当`el-table`元素中注入`data`对象数组后，在`el-table-column`中用`prop`属性来对应对象中的键名即可填入数据，用`label`属性来定义表格的列名。可以使用`width`属性来定义列宽。
 
-<el-card>
+<el-card shadow="hover">
   <el-table
     :data="tableData"
     style="width: 100%">
@@ -409,7 +409,7 @@
 
 `stripe`属性可以创建带斑马纹的表格。它接受一个`Boolean`，默认为`false`，设置为`true`即为启用。
 
-<el-card>
+<el-card shadow="hover">
   <el-table
     :data="tableData"
     stripe
@@ -435,7 +435,7 @@
 
 默认情况下，Table 组件是不具有竖直方向的边框的，如果需要，可以使用`border`属性，它接受一个`Boolean`，设置为`true`即可启用。
 
-<el-card>
+<el-card shadow="hover">
   <el-table
     :data="tableData"
     border
@@ -463,7 +463,7 @@
 
 只需要在 el-table-column 里面嵌套 el-table-column，就可以实现多级表头。
 
-<el-card>
+<el-card shadow="hover">
   <el-table
     :data="tableData3"
     style="width: 100%">
@@ -510,7 +510,7 @@
 
 Table 组件提供了单选的支持，只需要配置`highlight-current-row`属性即可实现单选。之后由`current-change`事件来管理选中时触发的事件，它会传入`currentRow`，`oldCurrentRow`。如果需要显示索引，可以增加一列`el-table-column`，设置`type`属性为`index`即可显示从 1 开始的索引号。
 
-<el-card>
+<el-card shadow="hover">
   <el-table
     ref="singleTable"
     :data="tableData"
@@ -548,7 +548,7 @@ Table 组件提供了单选的支持，只需要配置`highlight-current-row`属
 
 在列中设置`sortable`属性即可实现以该列为基准的排序，接受一个`Boolean`，默认为`false`。可以通过 Table 的`default-sort`属性设置默认的排序列和排序顺序。可以使用`sort-method`或者`sort-by`使用自定义的排序规则。如果需要后端排序，需将`sortable`设置为`custom`，同时在 Table 上监听`sort-change`事件，在事件回调中可以获取当前排序的字段名和排序顺序，从而向接口请求排序后的表格数据。在本例中，我们还使用了`formatter`属性，它用于格式化指定列的值，接受一个`Function`，会传入两个参数：`row`和`column`，可以根据自己的需求进行处理。
 
-<el-card>
+<el-card shadow="hover">
   <el-table
     :data="tableData"
     style="width: 100%"
@@ -579,7 +579,7 @@ Table 组件提供了单选的支持，只需要配置`highlight-current-row`属
 当行内容过多并且不想显示横向滚动条时，可以使用 Table 展开行功能。
 通过设置 type="expand" 和 `Scoped slot` 可以开启展开行功能，`el-table-column` 的模板会被渲染成为展开行的内容，展开行可访问的属性与使用自定义列模板时的 `Scoped slot` 相同。
 
-<el-card>
+<el-card shadow="hover">
   <el-table
     :data="tableData5"
     style="width: 100%">

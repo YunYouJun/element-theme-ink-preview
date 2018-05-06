@@ -12,7 +12,7 @@ Popover 的属性与 Tooltip 很类似，它们都是基于`Vue-popper`开发的
 
 设置索引`ref`，在按钮中，我们注册了自定义指令`v-popover`，指向索引ID。`trigger`属性用于设置何时触发 Popover ，提供三种触发方式：`hover`, `click` 和 `focus`。第二种用法通过 `slot` 指定 reference。
 
-<el-card>
+<el-card shadow="hover">
 <el-row>
   <el-col :span="8" :xs="{span: 24}">
     <el-popover

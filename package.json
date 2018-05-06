@@ -87,11 +87,11 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
-    "element-theme-ink": "0.0.3",
-    "element-ui": "^2.3.2",
+    "element-theme-ink": "^0.1.4",
+    "element-ui": "^2.3.7",
     "gh-pages": "^1.1.0",
     "markdown-it": "^8.4.1",
-    "vue": "^2.5.13",
+    "vue": "^2.5.16",
     "vue-i18n": "^7.4.2",
     "vue-router": "^3.0.1"
   },

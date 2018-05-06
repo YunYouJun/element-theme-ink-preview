@@ -33,7 +33,7 @@
 
 本主题采用黑白线条风格。
 
-<el-card>
+<el-card shadow="hover">
   <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
     <el-menu-item index="1">处理中心</el-menu-item>
     <el-submenu index="2">
@@ -73,7 +73,7 @@
 
 通过`el-menu-item-group`组件可以实现菜单进行分组，分组名可以通过`title`属性直接设定，也可以通过具名 slot 来设定。
 
-<el-card>
+<el-card shadow="hover">
 <el-row class="tac">
   <el-col :span="12">
     <h5>默认颜色</h5>
@@ -132,7 +132,7 @@
 
 ### 折叠
 
-<el-card>
+<el-card shadow="hover">
 <el-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
   <el-radio-button :label="false">展开</el-radio-button>
   <el-radio-button :label="true">收起</el-radio-button>

@@ -8,9 +8,9 @@
 
 Card 组件包括`header`和`body`部分，`header`部分需要有显式具名 slot 分发，同时也是可选的。
 
-鼠标悬浮或触屏点击时，阴影渐变。
+鼠标悬浮或触屏点击时，阴影渐变。 已新增于 [Element 2.3.3](https://github.com/ElemeFE/element/releases/tag/v2.3.3)
 
-<el-card class="box-card">
+<el-card shadow="hover">
   <div slot="header" class="clearfix">
     <span>卡片名称</span>
   </div>
@@ -23,7 +23,7 @@ Card 组件包括`header`和`body`部分，`header`部分需要有显式具名 s
 
 卡片可以只有内容区域。
 
-<el-card class="box-card">
+<el-card shadow="hover">
   <div v-for="o in 4" :key="o" class="text item">
     {{'列表内容 ' + o }}
   </div>
@@ -37,7 +37,7 @@ Card 组件包括`header`和`body`部分，`header`部分需要有显式具名 s
 
 <el-row>
   <el-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
-    <el-card :body-style="{ padding: '20px' }">
+    <el-card shadow="hover" :body-style="{ padding: '20px' }">
       <img src="../assets/logo.png" class="image">
       <div style="padding: 14px;">
         <span>Vue</span>
@@ -47,6 +47,29 @@ Card 组件包括`header`和`body`部分，`header`部分需要有显式具名 s
         </div>
       </div>
     </el-card>
+  </el-col>
+</el-row>
+
+### 卡片阴影
+
+可对阴影的显示情况进行配置。
+
+`always`、`hover`、`never`，通过设置`shadow`属性来配置卡片阴影。
+
+<el-row :gutter="12">
+  <el-col :span="8">
+    <el-card shadow="always">
+      总是显示
+    </el-card>
+  </el-col>
+  <el-col :span="8">
+    <el-card shadow="hover">
+      鼠标悬浮时显示
+    </el-card>
+  </el-col>
+  <el-col :span="8">
+    <el-card shadow="never">
+      从不显示
   </el-col>
 </el-row>
 

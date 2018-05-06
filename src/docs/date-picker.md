@@ -108,7 +108,7 @@
 
 基本单位由`type`属性指定。快捷选项需配置`picker-options`对象中的`shortcuts`，禁用日期通过 `disabledDate` 设置，传入函数
 
-<el-card>
+<el-card shadow="hover">
   <div class="block">
     <span class="demonstration">默认</span>
     <el-date-picker
@@ -133,7 +133,7 @@
 
 通过扩展基础的日期选择，可以选择周、月、年
 
-<el-card>
+<el-card shadow="hover">
 <div class="block">
   <span class="demonstration">周</span>
   <el-date-picker
@@ -168,7 +168,7 @@
 
 在选择日期范围时，默认情况下左右面板会联动。如果希望两个面板各自独立切换当前月份，可以使用`unlink-panels`属性解除联动。
 
-<el-card>
+<el-card shadow="hover">
   <div class="block">
     <span class="demonstration">默认</span>
     <el-date-picker

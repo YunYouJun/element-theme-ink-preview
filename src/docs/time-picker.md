@@ -42,7 +42,7 @@
 
 使用 `el-time-picker` 标签，通过`selectableRange`限制可选时间范围。提供了两种交互方式：默认情况下通过鼠标滚轮进行选择，打开`arrow-control`属性则通过界面上的箭头进行选择。
 
-<el-card>
+<el-card shadow="hover">
   <el-time-picker
     v-model="value2"
     :picker-options="{

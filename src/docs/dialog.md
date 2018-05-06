@@ -80,7 +80,7 @@ Dialog 弹出一个对话框，适合需要定制性更大的场景。
 :::demo 需要设置`visible`属性，它接收`Boolean`，当为`true`时显示 Dialog。Dialog 分为两个部分：`body`和`footer`，`footer`需要具名为`footer`的`slot`。`title`属性用于定义标题，它是可选的，默认值为空。最后，本例还展示了`before-close`的用法。
 
 
-<el-card>
+<el-card shadow="hover">
   <el-button @click="dialogVisible = true">点击打开 Dialog</el-button>
 
   <el-dialog
@@ -101,7 +101,7 @@ Dialog 弹出一个对话框，适合需要定制性更大的场景。
 
 Dialog 组件的内容可以是任意的，甚至可以是表格或表单，下面是应用了 Element Table 和 Form 组件的两个样例。
 
-<el-card>
+<el-card shadow="hover">
 <!-- Table -->
 <el-button type="text" @click="dialogTableVisible = true">打开嵌套表格的 Dialog</el-button>
 

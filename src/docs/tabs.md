@@ -102,7 +102,7 @@
 
 Tabs 组件提供了选项卡功能，默认选中第一个标签页，你也可以通过 `value` 属性来指定当前选中的标签页。
 
-<el-card>
+<el-card shadow="hover">
 <template>
   <el-tabs v-model="activeName" @tab-click="handleClick">
     <el-tab-pane label="用户管理" name="first">用户管理</el-tab-pane>
@@ -118,7 +118,7 @@ Tabs 组件提供了选项卡功能，默认选中第一个标签页，你也可
 
 只需要设置 `type` 属性为 `card` 就可以使选项卡改变为标签风格。
 
-<el-card>
+<el-card shadow="hover">
   <el-tabs v-model="activeName2" type="card" @tab-click="handleClick">
     <el-tab-pane label="用户管理" name="first">用户管理</el-tab-pane>
     <el-tab-pane label="配置管理" name="second">配置管理</el-tab-pane>
@@ -133,7 +133,7 @@ Tabs 组件提供了选项卡功能，默认选中第一个标签页，你也可
 
 将`type`设置为`border-card`。
 
-<el-card>
+<el-card shadow="hover">
 <el-tabs type="border-card">
   <el-tab-pane label="用户管理">用户管理</el-tab-pane>
   <el-tab-pane label="配置管理">配置管理</el-tab-pane>
@@ -148,7 +148,7 @@ Tabs 组件提供了选项卡功能，默认选中第一个标签页，你也可
 
 标签一共有四个方向的设置 `tabPosition="left|right|top|bottom"`
 
-<el-card>
+<el-card shadow="hover">
   <el-radio-group v-model="tabPosition" style="margin-bottom: 30px;">
     <el-radio-button label="top">top</el-radio-button>
     <el-radio-button label="right">right</el-radio-button>
@@ -168,7 +168,7 @@ Tabs 组件提供了选项卡功能，默认选中第一个标签页，你也可
 
 增减标签页按钮只能在选项卡样式的标签页下使用
 
-<el-card>
+<el-card shadow="hover">
 <el-tabs v-model="editableTabsValue" type="card" editable @edit="handleTabsEdit">
   <el-tab-pane
     :key="item.name"

@@ -24,7 +24,7 @@
 
 定义`value`属性，它接受`Number`或者`String`。
 
-<el-card>
+<el-card shadow="hover">
 
   <el-badge :value="12" class="item">
     <el-button size="small">评论</el-button>
@@ -57,7 +57,7 @@
 
 除了数字外，设置`is-dot`属性，它接受一个`Boolean`。
 
-<el-card>
+<el-card shadow="hover">
 <el-badge is-dot class="item">
   <el-button class="share-button" icon="el-icon-share" type="dark"></el-button>
 </el-badge>

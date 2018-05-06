@@ -7,6 +7,9 @@
       <i class="el-icon-arrow-left"></i>
       {{ leftNav.title || leftNav.name }}
     </span>
+    <el-tooltip class="footer-nav-link footer-nav-center" :content="'Element ' + $route.path.split('/')[2] + ' 组件文档'" placement="top" effect="light">
+      <span @click="goToElementDoc">Element Doc</span>
+    </el-tooltip>
     <span
       v-if="rightNav"
       class="footer-nav-link footer-nav-right"
@@ -23,6 +26,8 @@
     color: #333;
     font-size: 14px;
     overflow: hidden;
+
+    text-align: center;
 
     &::after {
       content: '';
@@ -59,6 +64,10 @@
     float: right;
     margin-right: -4px;
   }
+
+  .footer-nav-center {
+    text-align: center;
+  }
 </style>
 
 <script>
@@ -72,7 +81,8 @@
         nav: [],
         currentIndex: -1,
         leftNav: null,
-        rightNav: null
+        rightNav: null,
+        elementDocLink: null,
       };
     },
 
@@ -105,7 +115,12 @@
 
       handleNavClick(direction) {
         this.$router.push(`/component${ direction === 'prev' ? this.leftNav.path : this.rightNav.path }`);
-      }
+      },
+
+      goToElementDoc() {
+        let href = "http://element.eleme.io/#/zh-CN/component" + this.currentComponent
+        window.open(href, '_blank')
+      },
     },
 
     created() {

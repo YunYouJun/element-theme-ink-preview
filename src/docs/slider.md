@@ -59,7 +59,7 @@
 
 通过设置绑定值自定义滑块的初始值
 
-<el-card>
+<el-card shadow="hover">
   <div class="block">
     <span class="demonstration">默认</span>
     <el-slider v-model="value1"></el-slider>
@@ -88,7 +88,7 @@
 
 改变`step`的值可以改变步长，通过设置`show-step`属性可以显示间断点
 
-<el-card>
+<el-card shadow="hover">
   <div class="block">
     <span class="demonstration">不显示间断点</span>
     <el-slider
@@ -112,7 +112,7 @@
 
 设置`show-input`属性会在右侧显示一个输入框
 
-<el-card>
+<el-card shadow="hover">
   <div class="block">
     <el-slider
       v-model="value8"
@@ -127,7 +127,7 @@
 
 设置`range`即可开启范围选择，此时绑定值是一个数组，其元素分别为最小边界值和最大边界值
 
-<el-card>
+<el-card shadow="hover">
   <div class="block">
     <el-slider
       v-model="value9"
@@ -142,7 +142,7 @@
 
 设置`vertical`可使 Slider 变成竖向模式，此时必须设置高度`height`属性
 
-<el-card>
+<el-card shadow="hover">
   <div class="block">
     <el-slider
       v-model="value10"

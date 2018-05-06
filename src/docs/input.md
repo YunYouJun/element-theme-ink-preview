@@ -61,7 +61,7 @@
 
 可以通过 `prefix-icon` 和 `suffix-icon` 属性在 input 组件首部和尾部增加显示图标，也可以通过 slot 来放置图标。
 
-<el-card>
+<el-card shadow="hover">
   <el-input
     placeholder="请选择日期"
     suffix-icon="el-icon-date"
@@ -76,7 +76,7 @@
 
 ### 文本域
 
-<el-card>
+<el-card shadow="hover">
   <el-input
     type="textarea"
     :rows="2"
@@ -89,7 +89,7 @@
 
 通过设置 `autosize` 属性可以使得文本域的高度能够根据文本内容自动进行调整，并且 `autosize` 还可以设定为一个对象，指定最小行数和最大行数。
 
-<el-card>
+<el-card shadow="hover">
 <el-input
   type="textarea"
   autosize
@@ -111,7 +111,7 @@
 
 可通过 slot 来指定在 input 中前置或者后置内容。
 
-<el-card>
+<el-card shadow="hover">
 <div>
   <el-input placeholder="请输入内容" v-model="input3">
     <template slot="prepend">http://</template>
@@ -136,7 +136,7 @@
 
 ### 尺寸
 
-<el-card>
+<el-card shadow="hover">
   <el-input
     placeholder="请输入内容"
     suffix-icon="el-icon-date"
