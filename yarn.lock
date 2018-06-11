@@ -6658,9 +6658,9 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-vue-about-me@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.npmjs.org/vue-about-me/-/vue-about-me-0.0.2.tgz#51dbc04b8708cef05b4c1ca4978f5dfb5e4e747d"
+vue-about-me@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.npmjs.org/vue-about-me/-/vue-about-me-0.0.5.tgz#2b4ee65d46942282c6ea4c70449f4809e3babfd8"
 
 vue-eslint-parser@^2.0.3:
   version "2.0.3"
