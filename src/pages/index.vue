@@ -6,10 +6,10 @@
       <h1 class="is-glow">{{ header }}</h1>
       <p>{{ description }}</p>
       <br>
-      <el-steps :active="1" finish-status="success" :align-center="true">
+      <el-steps :active="active" finish-status="success" :align-center="true">
         <el-step title="脚手架" description="预览网站"></el-step>
-        <el-step class="is-glow" title="开发中" description="几个月？"></el-step>
-        <el-step title="发布"></el-step>
+        <el-step title="开发中" description="几个月？"></el-step>
+        <el-step class="is-glow" title="发布" description="1.0.0"></el-step>
       </el-steps>
     </el-col>
   </el-row>
@@ -20,6 +20,7 @@ export default {
   name: 'Welcome',
   data () {
     return {
+      active: 3,
       header: 'Element-Theme-Ink',
       description: 'Dead simple css theme about element.'
     }
