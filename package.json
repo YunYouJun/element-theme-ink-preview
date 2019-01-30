@@ -17,6 +17,7 @@
   "author": "YunYouJun <me@yunyoujun.cn>",
   "license": "MIT",
   "scripts": {
+    "bootstrap": "cd packages && git clone https://github.com/YunYouJun/element-theme-ink",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.demo.js",
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",

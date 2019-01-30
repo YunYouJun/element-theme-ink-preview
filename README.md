@@ -26,7 +26,3 @@ yarn release:theme
 # lint fix
 yarn lint --fix
 ```
-
-## Intend
-
-- [ ] Travis
