@@ -33,11 +33,11 @@ Card 组件包括`header`和`body`部分，`header`部分需要有显式具名 s
 
 可配置定义更丰富的内容展示。
 
-配置`body-style`属性来自定义`body`部分的`style`，我们还使用了布局组件。
+配置`body-style`属性来自定义`body`部分的`style`。
 
 <el-row>
-  <el-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
-    <el-card shadow="hover" :body-style="{ padding: '20px' }">
+  <el-col :sm="{span:8}" :xs="{span:24}" >
+    <el-card shadow="always" :body-style="{ padding: '20px' }">
       <img src="../assets/logo.png" class="image">
       <div style="padding: 14px;">
         <span>Vue</span>
