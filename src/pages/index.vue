@@ -1,15 +1,17 @@
 <template>
   <el-row class="welcome">
     <el-col :span="24">
-      <i class="el-icon-edit is-glow"></i>
-      <br>
-      <h1 class="is-glow">{{ header }}</h1>
+      <i class="el-icon-edit is-glow" />
+      <br />
+      <h1 class="is-glow">
+        {{ header }}
+      </h1>
       <p>{{ description }}</p>
-      <br>
+      <br />
       <el-steps :active="active" finish-status="success" :align-center="true">
-        <el-step title="脚手架" description="预览网站"></el-step>
-        <el-step title="开发中" description="几个月？"></el-step>
-        <el-step class="is-glow" title="发布" description="1.0.0"></el-step>
+        <el-step title="脚手架" description="预览网站" />
+        <el-step title="开发中" description="几个月？" />
+        <el-step class="is-glow" title="发布" description="1.0.0" />
       </el-steps>
     </el-col>
   </el-row>
@@ -18,7 +20,7 @@
 <script>
 export default {
   name: 'Welcome',
-  data () {
+  data() {
     return {
       active: 3,
       header: 'Element-Theme-Ink',
@@ -48,9 +50,15 @@ export default {
     animation-iteration-count: infinite;
     animation-name: glowing;
     @keyframes glowing {
-      from { text-shadow: 0 0 0 rgba(#000, 0.1);}
-      50% { text-shadow: 0 0 5px rgba(#000, 0.3);}
-      to { text-shadow: 0 0 0 rgba(#000, 0.1);}
+      from {
+        text-shadow: 0 0 0 rgba(#000, 0.1);
+      }
+      50% {
+        text-shadow: 0 0 5px rgba(#000, 0.3);
+      }
+      to {
+        text-shadow: 0 0 0 rgba(#000, 0.1);
+      }
     }
   }
 }

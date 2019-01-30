@@ -1,6 +1,6 @@
 <template>
   <div>
-    <change-log></change-log>
+    <change-log />
   </div>
 </template>
 <script>
@@ -9,10 +9,8 @@ export default {
   components: {
     ChangeLog
   },
-  data () {
-    return {
-
-    }
+  data() {
+    return {}
   }
 }
 </script>

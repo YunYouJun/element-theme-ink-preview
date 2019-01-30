@@ -1,15 +1,14 @@
 <template>
-  <el-scrollbar class="page-component__scroll" ref="componentScrollBar">
-  <div class="page-container page-component">
-    <el-scrollbar class="page-component__nav">
-      <side-nav :data="navsData" :base="`/component`"></side-nav>
-    </el-scrollbar>
-    <div class="page-component__content">
-      <router-view class="content"></router-view>
-      <footer-nav></footer-nav>
+  <el-scrollbar ref="componentScrollBar" class="page-component__scroll">
+    <div class="page-container page-component">
+      <el-scrollbar class="page-component__nav">
+        <side-nav :data="navsData" :base="`/component`" />
+      </el-scrollbar>
+      <div class="page-component__content">
+        <router-view class="content" />
+        <footer-nav />
+      </div>
     </div>
-
-  </div>
   </el-scrollbar>
 </template>
 <script>

@@ -1,22 +1,20 @@
 <template>
-  <el-scrollbar class="page-component__scroll" ref="componentScrollBar">
-  <div class="page-container page-component">
-    <el-scrollbar class="page-component__nav">
-      <side-nav :data="navsData" :base="`/guide`"></side-nav>
-    </el-scrollbar>
-    <div class="page-component__content">
-      <router-view class="content"></router-view>
+  <el-scrollbar ref="componentScrollBar" class="page-component__scroll">
+    <div class="page-container page-component">
+      <el-scrollbar class="page-component__nav">
+        <side-nav :data="navsData" :base="`/guide`" />
+      </el-scrollbar>
+      <div class="page-component__content">
+        <router-view class="content" />
+      </div>
     </div>
-  </div>
   </el-scrollbar>
 </template>
 
 <script>
 export default {
-  components: {
-
-  },
-  data () {
+  components: {},
+  data() {
     return {
       navsData: {
         name: '指南',

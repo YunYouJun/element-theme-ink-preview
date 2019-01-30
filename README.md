@@ -22,6 +22,9 @@ yarn build:theme
 # push
 yarn release # incluse release:theme
 yarn release:theme
+
+# lint fix
+yarn lint --fix
 ```
 
 ## Intend

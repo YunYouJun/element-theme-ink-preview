@@ -2,13 +2,13 @@
   <div id="app">
     <el-container>
       <el-header>
-        <main-header></main-header>
+        <main-header />
       </el-header>
       <el-main>
-        <router-view/>
+        <router-view />
       </el-main>
       <el-footer v-show="!isComponent">
-        <main-footer></main-footer>
+        <main-footer />
       </el-footer>
     </el-container>
   </div>
@@ -18,13 +18,11 @@
 export default {
   name: 'App',
   computed: {
-    isComponent () {
+    isComponent() {
       return /^component-/.test(this.$route.name || '')
     }
   }
 }
 </script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>

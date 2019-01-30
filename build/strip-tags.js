@@ -5,30 +5,30 @@
  * Licensed under the MIT license.
  */
 
-'use strict';
+'use strict'
 
-var cheerio = require('cheerio');
+var cheerio = require('cheerio')
 
 exports.strip = function(str, tags) {
-  var $ = cheerio.load(str, {decodeEntities: false});
+  var $ = cheerio.load(str, { decodeEntities: false })
 
   if (!tags || tags.length === 0) {
-    return str;
+    return str
   }
 
-  tags = !Array.isArray(tags) ? [tags] : tags;
-  var len = tags.length;
+  tags = !Array.isArray(tags) ? [tags] : tags
+  var len = tags.length
 
   while (len--) {
-    $(tags[len]).remove();
+    $(tags[len]).remove()
   }
 
-  return $.html();
-};
+  return $.html()
+}
 
 exports.fetch = function(str, tag) {
-  var $ = cheerio.load(str, {decodeEntities: false});
-  if (!tag) return str;
+  var $ = cheerio.load(str, { decodeEntities: false })
+  if (!tag) return str
 
-  return $(tag).html();
-};
+  return $(tag).html()
+}

@@ -1,5 +1,5 @@
 <template>
-  <readme></readme>
+  <readme />
 </template>
 <script>
 import readme from '../../packages/element-theme-ink/README.md'

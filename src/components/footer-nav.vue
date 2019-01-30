@@ -3,71 +3,80 @@
     <span
       v-if="leftNav"
       class="footer-nav-link footer-nav-left"
-      @click="handleNavClick('prev')">
-      <i class="el-icon-arrow-left"></i>
+      @click="handleNavClick('prev')"
+    >
+      <i class="el-icon-arrow-left" />
       {{ leftNav.title || leftNav.name }}
     </span>
-    <el-tooltip class="footer-nav-link footer-nav-center" :content="'Element ' + $route.path.split('/')[2] + ' 组件文档'" placement="top" effect="light">
-      <span @click="goToElementDoc">Element Doc</span>
+    <el-tooltip
+      class="footer-nav-link footer-nav-center"
+      :content="'Element ' + $route.path.split('/')[2] + ' 组件文档'"
+      placement="top"
+      effect="light"
+    >
+      <span @click="goToElementDoc">
+        Element Doc
+      </span>
     </el-tooltip>
     <span
       v-if="rightNav"
       class="footer-nav-link footer-nav-right"
-      @click="handleNavClick('next')">
+      @click="handleNavClick('next')"
+    >
       {{ rightNav.title || rightNav.name }}
-      <i class="el-icon-arrow-right"></i>
+      <i class="el-icon-arrow-right" />
     </span>
   </div>
 </template>
 
 <style lang="scss">
-  .footer-nav {
-    padding: 40px 0;
-    color: #333;
-    font-size: 14px;
-    overflow: hidden;
+.footer-nav {
+  padding: 40px 0;
+  color: #333;
+  font-size: 14px;
+  overflow: hidden;
 
-    text-align: center;
+  text-align: center;
 
-    &::after {
-      content: '';
-      display: block;
-      clear: both;
-    }
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  & i {
+    transition: 0.3s;
+    color: #999;
+    vertical-align: baseline;
+  }
+}
+
+.footer-nav-link {
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    color: #409eff;
 
     & i {
-      transition: .3s;
-      color: #999;
-      vertical-align: baseline;
+      color: #409eff;
     }
   }
+}
 
-  .footer-nav-link {
-    cursor: pointer;
-    transition: .3s;
+.footer-nav-left {
+  float: left;
+  margin-left: -4px;
+}
 
-    &:hover {
-      color: #409EFF;
+.footer-nav-right {
+  float: right;
+  margin-right: -4px;
+}
 
-      & i {
-        color: #409EFF;
-      }
-    }
-  }
-
-  .footer-nav-left {
-    float: left;
-    margin-left: -4px;
-  }
-
-  .footer-nav-right {
-    float: right;
-    margin-right: -4px;
-  }
-
-  .footer-nav-center {
-    text-align: center;
-  }
+.footer-nav-center {
+  text-align: center;
+}
 </style>
 
 <script>

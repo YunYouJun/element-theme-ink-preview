@@ -1,29 +1,27 @@
 import navConfig from '../nav.config.json'
 
 const LOAD_MAP = name => {
-  return r => require.ensure([], () =>
-    r(require(`../pages/${name}.vue`)))
+  return r => require.ensure([], () => r(require(`../pages/${name}.vue`)))
 }
 
-const load = function (path) {
+const load = function(path) {
   return LOAD_MAP(path)
 }
 
 const LOAD_DOCS_MAP = path => {
-  return r => require.ensure([], () =>
-    r(require(`../docs/${path}.md`)))
+  return r => require.ensure([], () => r(require(`../docs/${path}.md`)))
 }
 
-const loadDocs = function (path) {
+const loadDocs = function(path) {
   return LOAD_DOCS_MAP(path)
 }
 
-const registerRoute = (navConfig) => {
+const registerRoute = navConfig => {
   let route = []
   let nav = navConfig
   route.push({
-    path: `/component`,
-    redirect: `/component/color`,
+    path: '/component',
+    redirect: '/component/color',
     component: load('component'),
     children: []
   })
@@ -42,11 +40,9 @@ const registerRoute = (navConfig) => {
     addRoute(nav)
   }
 
-  function addRoute (page) {
+  function addRoute(page) {
     let path = page.path.slice(1)
-    const component = path === 'changelog'
-      ? load(`changelog`)
-      : loadDocs(path)
+    const component = path === 'changelog' ? load('changelog') : loadDocs(path)
     let child = {
       path: path,
       meta: {
@@ -65,10 +61,10 @@ const registerRoute = (navConfig) => {
 
 let route = registerRoute(navConfig)
 
-const generateMiscRoutes = function () {
+const generateMiscRoutes = function() {
   let guideRoute = {
-    path: `/guide`, // 指南
-    redirect: `/guide/use`,
+    path: '/guide', // 指南
+    redirect: '/guide/use',
     meta: {
       title: '使用'
     },
@@ -94,7 +90,7 @@ const generateMiscRoutes = function () {
   }
 
   let resourceRoute = {
-    path: `/resource`, // 资源
+    path: '/resource', // 资源
     name: 'resource',
     component: load('resource'),
     meta: {
@@ -103,7 +99,7 @@ const generateMiscRoutes = function () {
   }
 
   let indexRoute = {
-    path: `/`, // 首页
+    path: '/', // 首页
     name: 'home',
     component: load('index'),
     meta: {
@@ -116,13 +112,11 @@ const generateMiscRoutes = function () {
 
 route = route.concat(generateMiscRoutes())
 
-route = route.concat(
-  [
-    {
-      path: '*',
-      redirect: '/'
-    }
-  ]
-)
+route = route.concat([
+  {
+    path: '*',
+    redirect: '/'
+  }
+])
 
 export default route

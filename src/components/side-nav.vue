@@ -1,44 +1,59 @@
 <template>
   <div
     class="side-nav"
-    @mouseenter="isFade = false"
     :class="{ 'is-fade': isFade }"
-    :style="navStyle">
+    :style="navStyle"
+    @mouseenter="isFade = false"
+  >
     <ul>
-      <li class="nav-item" :key="data.name">
-        <a v-if="!data.path && !data.href" @click="expandMenu">{{data.name}}</a>
-        <a v-if="data.href" :href="data.href" target="_blank">{{data.name}}</a>
+      <li :key="data.name" class="nav-item">
+        <a v-if="!data.path && !data.href" @click="expandMenu">
+          {{ data.name }}
+        </a>
+        <a v-if="data.href" :href="data.href" target="_blank">
+          {{ data.name }}
+        </a>
         <router-link
           v-if="data.path"
           active-class="active"
           :to="base + data.path"
           exact
-          v-text="data.title || data.name">
-        </router-link>
-        <ul class="pure-menu-list sub-nav" v-if="data.children">
-          <li class="nav-item" :key="navItem.name" v-for="navItem in data.children">
+          v-text="data.title || data.name"
+        />
+        <ul v-if="data.children" class="pure-menu-list sub-nav">
+          <li
+            v-for="navItem in data.children"
+            :key="navItem.name"
+            class="nav-item"
+          >
             <router-link
               class=""
               active-class="active"
               :to="base + navItem.path"
               exact
-              v-text="navItem.title || navItem.name">
-            </router-link>
+              v-text="navItem.title || navItem.name"
+            />
           </li>
         </ul>
         <template v-if="data.groups">
-          <div class="nav-group" :key="group.name" v-for="group in data.groups">
-            <div class="nav-group__title" @click="expandMenu">{{group.groupName}}</div>
+          <div v-for="group in data.groups" :key="group.name" class="nav-group">
+            <div class="nav-group__title" @click="expandMenu">
+              {{ group.groupName }}
+            </div>
             <ul class="pure-menu-list">
               <li
-                class="nav-item" :key="navItem.name"
                 v-for="navItem in group.list"
-                v-if="!navItem.disabled">
-                <router-link
-                  active-class="active"
-                  :to="base + navItem.path"
-                  exact
-                  v-text="navItem.title"></router-link>
+                :key="navItem.name"
+                class="nav-item"
+              >
+                <template v-if="!navItem.disabled">
+                  <router-link
+                    active-class="active"
+                    :to="base + navItem.path"
+                    exact
+                    v-text="navItem.title"
+                  />
+                </template>
               </li>
             </ul>
           </div>
@@ -50,123 +65,123 @@
 </template>
 
 <style lang="scss">
-  .side-nav {
-    width: 100%;
-    box-sizing: border-box;
-    padding-right: 30px;
-    transition: opacity .3s;
-    &.is-fade {
-      transition: opacity 3s;
-    }
+.side-nav {
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 30px;
+  transition: opacity 0.3s;
+  &.is-fade {
+    transition: opacity 3s;
+  }
 
-    li {
-      list-style: none;
-    }
+  li {
+    list-style: none;
+  }
 
-    ul {
-      padding: 0;
+  ul {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  > ul > .nav-item > a {
+    margin-top: 15px;
+  }
+
+  > ul > .nav-item:nth-child(-n + 4) > a {
+    margin-top: 0;
+  }
+
+  .nav-item {
+    text-align: justify;
+    a {
+      font-size: 16px;
+      color: #999;
+      line-height: 40px;
+      height: 40px;
       margin: 0;
-      overflow: hidden;
-    }
+      padding: 0;
+      text-decoration: none;
+      display: block;
+      position: relative;
+      transition: 0.15s ease-out;
+      font-weight: bold;
 
-    > ul > .nav-item > a {
-      margin-top: 15px;
-    }
-
-    > ul > .nav-item:nth-child(-n + 4) > a {
-      margin-top: 0;
+      &.active {
+        color: #000;
+      }
     }
 
     .nav-item {
-      text-align: justify;
       a {
-        font-size: 16px;
-        color: #999;
-        line-height: 40px;
-        height: 40px;
-        margin: 0;
-        padding: 0;
-        text-decoration: none;
         display: block;
-        position: relative;
-        transition: .15s ease-out;
-        font-weight: bold;
+        height: 40px;
+        color: #777;
+        line-height: 40px;
+        font-size: 14px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-weight: 200;
 
+        &:hover,
         &.active {
           color: #000;
+          font-weight: normal;
         }
+      }
+    }
+
+    &.sponsors {
+      & > .sub-nav {
+        margin-top: -10px;
+      }
+
+      & > a {
+        color: #777;
+        font-weight: 300;
+        font-size: 14px;
       }
 
       .nav-item {
+        display: inline-block;
+
         a {
-          display: block;
-          height: 40px;
-          color: #777;
-          line-height: 40px;
-          font-size: 14px;
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          font-weight: 200;
-
-          &:hover,
-          &.active {
-            color: #000;
-            font-weight: normal;
-          }
-        }
-      }
-
-      &.sponsors {
-        & > .sub-nav {
-          margin-top: -10px;
-        }
-
-        & > a {
-          color: #777;
-          font-weight: 300;
-          font-size: 14px;
-        }
-
-        .nav-item {
+          height: auto;
           display: inline-block;
+          vertical-align: middle;
+          margin: 8px 12px 12px 0;
 
-          a {
-            height: auto;
-            display: inline-block;
-            vertical-align: middle;
-            margin: 8px 12px 12px 0;
-
-            img {
-              width: 36px;
-            }
+          img {
+            width: 36px;
           }
+        }
 
-          &:nth-child(2) a img {
-            width: 42px;
-          }
+        &:nth-child(2) a img {
+          width: 42px;
         }
       }
     }
-
-    .nav-group__title {
-      font-size: 12px;
-      color: #999;
-      line-height: 26px;
-      margin-top: 15px;
-    }
-
-    #code-sponsor-widget {
-      margin: 0 0 0 -20px;
-    }
   }
-  .nav-dropdown-list {
-    width: 120px;
-    margin-top: -8px;
-    li {
-      font-size: 14px;
-    }
+
+  .nav-group__title {
+    font-size: 12px;
+    color: #999;
+    line-height: 26px;
+    margin-top: 15px;
   }
+
+  #code-sponsor-widget {
+    margin: 0 0 0 -20px;
+  }
+}
+.nav-dropdown-list {
+  width: 120px;
+  margin-top: -8px;
+  li {
+    font-size: 14px;
+  }
+}
 </style>
 
 <script>

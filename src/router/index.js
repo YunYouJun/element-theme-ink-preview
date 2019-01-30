@@ -17,7 +17,7 @@ Vue.component('footer-nav', FooterNav)
 const router = new Router({
   routes,
   // mode: 'history',
-  scrollBehavior (to, from, savedPosition) {
+  scrollBehavior(to, from, savedPosition) {
     if (to.hash) {
       return {
         selector: to.hash

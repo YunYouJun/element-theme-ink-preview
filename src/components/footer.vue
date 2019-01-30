@@ -1,14 +1,17 @@
 <template>
   <div class="footer">
-    <hr>
-    <vue-about-me :copyright="copyright"></vue-about-me>
+    <hr />
+    <vue-about-me :copyright="copyright" />
   </div>
 </template>
 
 <script>
 import VueAboutMe from 'vue-about-me'
 export default {
-  data () {
+  components: {
+    VueAboutMe
+  },
+  data() {
     return {
       copyright: {
         name: 'Element-Theme-Ink',
@@ -18,9 +21,6 @@ export default {
         link: 'https://ink.yunyoujun.cn'
       }
     }
-  },
-  components: {
-    VueAboutMe
   }
 }
 </script>
