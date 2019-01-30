@@ -20,10 +20,8 @@
   };
 </script>
 <style>
-  .demo-box.demo-input-number {
-    .el-input-number + .el-input-number {
-      margin-left: 10px;
-    }
+  .el-input-number + .el-input-number {
+    margin-left: 10px;
   }
 </style>
 

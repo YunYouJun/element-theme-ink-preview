@@ -11,9 +11,9 @@ const striptags = require('./strip-tags')
 const config = require('./config')
 
 const isProd = process.env.NODE_ENV === 'production'
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin")
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 function convert(str) {
   str = str.replace(/(&#x)(\w{4});/gi, function($0) {
@@ -230,7 +230,7 @@ if (isProd) {
   webpackConfig.plugins.push(
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css',
-      chunkFilename: '[id].[hash].css',
+      chunkFilename: '[id].[hash].css'
     })
   )
   webpackConfig.optimization = {

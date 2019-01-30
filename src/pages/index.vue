@@ -7,24 +7,28 @@
         {{ header }}
       </h1>
       <p>{{ description }}</p>
-      <br />
-      <el-steps :active="active" finish-status="success" :align-center="true">
-        <el-step title="脚手架" description="预览网站" />
-        <el-step title="开发中" description="几个月？" />
-        <el-step class="is-glow" title="发布" description="1.0.0" />
-      </el-steps>
+      <el-button type="dark" round style="margin:20px;" @click="goToStart">
+        {{ msg }}
+      </el-button>
     </el-col>
   </el-row>
 </template>
 
 <script>
+import inkPkg from '../../packages/element-theme-ink/package.json'
 export default {
   name: 'Welcome',
   data() {
     return {
       active: 3,
       header: 'Element-Theme-Ink',
-      description: 'Dead simple css theme about element.'
+      description: 'Dead simple css theme about element.',
+      msg: 'GET STARTED - v' + inkPkg.version
+    }
+  },
+  methods: {
+    goToStart() {
+      this.$router.push('component')
     }
   }
 }
