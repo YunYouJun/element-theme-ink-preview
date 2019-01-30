@@ -10,18 +10,20 @@ Preview : [element-theme-ink-preview](https://ink.yunyoujun.cn/)
 
 ``` bash
 # install dependencies
-npm install
+yarn
 
 # serve with hot reload at localhost:8080
-npm run dev
+yarn dev
 
 # build for production with minification
-npm run build
+yarn build
+yarn build:theme
 
-# build for production and view the bundle analyzer report
-npm run build --report
+# push
+yarn release # incluse release:theme
+yarn release:theme
 ```
 
 ## Intend
 
-- Travis
+- [ ] Travis

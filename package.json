@@ -24,7 +24,7 @@
     "build:theme": "gulp build --gulpfile packages/element-theme-ink/gulpfile.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "release": "sh build/git-release.sh",
+    "release": "sh build/git-release.sh 'update theme'",
     "release:theme": "sh build/git-theme.sh"
   },
   "bugs": {

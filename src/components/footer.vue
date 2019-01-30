@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <hr>
-    <vue-about-me :copyright="copyright" :links="links"></vue-about-me>
+    <vue-about-me :copyright="copyright"></vue-about-me>
   </div>
 </template>
 
