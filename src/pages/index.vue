@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     goToStart() {
-      this.$router.push('component')
+      this.$router.push('guide')
     }
   }
 }
