@@ -1,3 +1,5 @@
+# Deprecated, Move to [element-theme-ink/docs](https://github.com/YunYouJun/element-theme-ink/tree/master/docs)
+
 # element-theme-ink-preview
 
 > [element-theme-ink](https://github.com/YunYouJun/element-theme-ink).
@@ -8,7 +10,7 @@ Preview : [element-theme-ink-preview](https://ink.yunyoujun.cn/)
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 yarn
 
